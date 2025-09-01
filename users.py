@@ -27,6 +27,7 @@ class AllUsers :
 
 
 
+
 # Router of get_all_users
 
 user_router = APIRouter(tags=["Users Endpoint"])
