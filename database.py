@@ -11,7 +11,7 @@ Base = declarative_base()
 engine = create_engine(url)
 
 # session factory
-session = sessionmaker(bind=engine, autoflush=False, autocommit = False)
+sessionss = sessionmaker(bind=engine, autoflush=False, autocommit = False)
 
 # Database dependency function
 # def run_db():
