@@ -8,10 +8,10 @@ url = "postgresql+psycopg2://postgres:admin@localhost:5432/social_media_db"
 Base = declarative_base()
 
 # Engine
-engines = create_engine(url)
+enginess = create_engine(url)
 
 # session factory
-sessions = sessionmaker(bind=engines, autoflush=False, autocommit = False)
+sessions = sessionmaker(bind=enginess, autoflush=False, autocommit = False)
 
 # Database dependency function
 def run_db():
