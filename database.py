@@ -8,14 +8,14 @@ url = "postgresql+psycopg2://postgres:admin@localhost:5432/social_media_db"
 Base = declarative_base()
 
 # Engine
-engine = create_engine(url)
+engines = create_engine(url)
 
 # session factory
-session = sessionmaker(bind=engine, autoflush=False, autocommit = False)
+sessions = sessionmaker(bind=engines, autoflush=False, autocommit = False)
 
 # Database dependency function
 def run_db():
-    db = session()
+    db = sessions()
     try:
         yield db
     finally:
